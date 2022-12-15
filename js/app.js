@@ -7,7 +7,7 @@ function displayTable() {
     var amount = document.getElementById("amount").value;
   
     // Calculate the total balance by adding the new amount to the existing balance (assuming the initial balance is 0)
-    var balance = localStorage.getItem("balance")+parseInt(amount);
+    var balance = Number(localStorage.getItem("balance")) +parseInt(amount);
   
     // Create the HTML for a new table row with the user's input
     var tableRowHtml = "<tr><td>" + name + "</td><td>" + description + "</td><td>" + date + "</td><td>" + amount + "</td><td>" + balance + "</td></tr>";
@@ -38,9 +38,8 @@ function saveData() {
     
   
     // Calculate the total balance by adding the new amount to the existing balance (assuming the initial balance is 0)
-    console.log(Number(localStorage.getItem("balance")))
-    console.log(Number(parseInt(amount)));
-    var balance = Number(localStorage.getItem("balance")) +Number(amount);
+    
+    var balance = Number(localStorage.getItem("balance")) +parseInt(amount);
     console.log(balance);
     // Save the user's input in localStorage
     localStorage.setItem("name", name);
