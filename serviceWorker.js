@@ -6,8 +6,7 @@ var assetsToCache = [
     "/js/app.js",
     "/images/logo.jpeg"
   ];
-  //
-  
+
   // This is the install event, which is triggered when the service worker is installed
   self.addEventListener("install", function(event) {
     // Open a cache and add the assets to it
