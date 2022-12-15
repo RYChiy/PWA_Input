@@ -37,6 +37,7 @@ self.addEventListener('activate', function (event) {
 		return Promise.all(keys.filter(function (key) {
 			return !cacheIDs.includes(key);
 		}).map(function (key) {
+            console.log("Delete Cache: "+caches)
 			return caches.delete(key);
 		}));
 	}).then(function () {
