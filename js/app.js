@@ -34,11 +34,11 @@ function saveData() {
     var description = document.getElementById("description").value;
     var date = document.getElementById("date").value;
     var amount = document.getElementById("amount").value;
-    var balance;
+     
     
   
     // Calculate the total balance by adding the new amount to the existing balance (assuming the initial balance is 0)
-     balance +=  parseInt(amount);
+    var balance =  localStorage.getItem("balance")+parseInt(amount);
     console.log(parseInt(balance));
     // Save the user's input in localStorage
     localStorage.setItem("name", name);
