@@ -38,7 +38,9 @@ function saveData() {
     
   
     // Calculate the total balance by adding the new amount to the existing balance (assuming the initial balance is 0)
-    var balance =  localStorage.getItem("balance")+parseInt(amount);
+    console.log(parseInt(localStorage.getItem("balance")))
+    console.log(parseInt(parseInt(amount)));
+    var balance = parseInt(localStorage.getItem("balance")) +parseInt(amount);
     console.log(parseInt(balance));
     // Save the user's input in localStorage
     localStorage.setItem("name", name);
