@@ -1,3 +1,9 @@
+
+var version = '1.4.2';
+var coreID = version + '_core';
+var pageID = version + '_pages';
+var imgID = version + '_img';
+var cacheIDs = [coreID, pageID, imgID];
 const staticDevCoffee = "dev-coffee-site-v1";
 const assets = [
   "/",
@@ -7,12 +13,11 @@ const assets = [
   "/images/logo.jpeg"
 ];
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(staticDevCoffee).then(cache => {
-      cache.addAll(assets);
-    })
-  );
+// On install, cache some stuff
+self.addEventListener('install', function (event) {
+	event.waitUntil(caches.open(cacheIDs).then(function (cache) {
+		// Install my core files
+	}));
 });
 
 self.addEventListener("fetch", fetchEvent => {
@@ -23,11 +28,7 @@ self.addEventListener("fetch", fetchEvent => {
   );
 });
 
-var version = '1.4.2';
-var coreID = version + '_core';
-var pageID = version + '_pages';
-var imgID = version + '_img';
-var cacheIDs = [coreID, pageID, imgID];
+
 
 // On version update, remove old cached files
 self.addEventListener('activate', function (event) {
