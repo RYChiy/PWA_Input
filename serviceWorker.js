@@ -17,7 +17,7 @@ const assets = [
 self.addEventListener('install', function (event) {
 	event.waitUntil(caches.open(cacheIDs).then(function (cache) {
 		// Install my core files
-        console.log(version);
+        console.log("Service Worker version: "+version);
 	}));
 });
 
