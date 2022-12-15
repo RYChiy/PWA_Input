@@ -7,7 +7,7 @@ function displayTable() {
     var amount = document.getElementById("amount").value;
   
     // Calculate the total balance by adding the new amount to the existing balance (assuming the initial balance is 0)
-    var balance = parseInt(localStorage.getItem("balance"))+parseInt(amount);
+    var balance = localStorage.getItem("balance")+parseInt(amount);
   
     // Create the HTML for a new table row with the user's input
     var tableRowHtml = "<tr><td>" + name + "</td><td>" + description + "</td><td>" + date + "</td><td>" + amount + "</td><td>" + balance + "</td></tr>";
