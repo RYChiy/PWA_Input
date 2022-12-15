@@ -33,5 +33,13 @@
         
     </main>
     <script src="js/app.js"></script>
+
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceWorker.js')
+                .then(function() { console.log("Tada! Your service worker is now registered"); });
+        }
+    </script>
   </body>
 </html>
