@@ -47,7 +47,7 @@ function saveData() {
     localStorage.setItem("description", description);
     localStorage.setItem("date", date);
     localStorage.setItem("amount", amount);
-    localStorage.numeric.setItem("balance", balance);
+    localStorage.setItem("balance", balance);
   }
   
 if ("serviceWorker" in navigator) {
