@@ -56,3 +56,8 @@ table {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .button{
+align-self: center;
+
+  }
