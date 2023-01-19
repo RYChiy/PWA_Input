@@ -32,7 +32,7 @@ function handleStateChange() {
 window.addEventListener('online', handleStateChange);
 window.addEventListener('offline', handleStateChange);
 
-
+document.getElementById('result').innerHTML = navigator.deviceMemory || 'unknown'
 
 function saveToCache() {
   console.log("Save data to cache!");
